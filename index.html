@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visualisasi Data Pendidikan - Student Performance</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .sumber {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 30px;
+    }
+    .chart-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    p.deskripsi {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Visualisasi Data Performa Siswa</h1>
+  <p class="sumber">
+    Sumber Data: Students Performance in Exams — 
+    <a href="https://www.kaggle.com/datasets/spscientist/students-performance-in-exams" target="_blank">
+      Kaggle (spscientist)
+    </a>
+  </p>
+
+  <!-- Chart 1: Bar Chart -->
+  <div class="chart-container">
+    <h2>📌 Grafik 1: Rata-rata Nilai per Mata Pelajaran berdasarkan Gender</h2>
+    <p class="deskripsi">
+      Bar chart ini menunjukkan perbandingan rata-rata nilai Math, Reading, dan Writing 
+      antara siswa laki-laki dan perempuan.
+    </p>
+    <div id="barplot"></div>
+  </div>
+
+  <!-- Chart 2: Pie Chart -->
+  <div class="chart-container">
+    <h2>📌 Grafik 2: Distribusi Tingkat Pendidikan Orang Tua</h2>
+    <p class="deskripsi">
+      Pie chart ini menampilkan proporsi latar belakang pendidikan orang tua siswa,
+      mulai dari SMA hingga Master's degree.
+    </p>
+    <div id="pieplot"></div>
+  </div>
+
+  <!-- Chart 3: Line Scatter Chart -->
+  <div class="chart-container">
+    <h2>📌 Grafik 3: Hubungan Nilai Reading dan Writing Siswa</h2>
+    <p class="deskripsi">
+      Scatter plot ini menunjukkan korelasi antara nilai Reading dan Writing,
+      sehingga dapat dilihat apakah siswa yang bagus di Reading juga bagus di Writing.
+    </p>
+    <div id="linescatter"></div>
+  </div>
+
+  <!-- Panggil semua file JS -->
+  <script src="barplot.js"></script>
+  <script src="pieplot.js"></script>
+  <script src="linescatter.js"></script>
+
+</body>
+</html>
